@@ -3,5 +3,6 @@
 @section('title', 'Invoice manager | Invoices')
 
 @section('content')
-  <h1>Mes factures</h1>
+  <h2>Mes factures</h2>
+  <p>Dans cette section, vous pouvez voir la liste de vos factures clients</p>
 @endsection
