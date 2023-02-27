@@ -16,16 +16,24 @@ use App\Http\Controllers\InvoiceController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/clients', [ClientController::class, 'index']); 
+
+Route::get('/clients/create', [ClientController::class, 'create']);
+
+Route::post('/clients/create', [ClientController::class, 'store']);
 
 Route::get('/clients/edit/{client:id}', [ClientController::class, 'edit']);
 
 Route::patch('/clients/edit/{client:id}', [ClientController::class, 'update']);
 
 Route::get('/invoices', [InvoiceController::class, 'index']);
+
+Route::get('/invoices/create', [InvoiceController::class, 'create']);
+
+Route::post('/invoices/create', [InvoiceController::class, 'store']);
 
 Route::get('/invoices/edit/{invoice:id}', [InvoiceController::class, 'edit']);
 
