@@ -3,5 +3,6 @@
 @section('title', 'Invoice Manger | Clients')
 
 @section('content')
-  <h1>Mes clients</h1>
+  <h2>Mes clients</h2>
+  <p>Dans cette section, vous pouvez la liste de tous vos clients</p>
 @endsection
