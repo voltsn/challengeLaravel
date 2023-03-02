@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input:not([type="submit"]){
+    border-width: 2px;
+    padding: 0.5em;
+    width: 100%;
+}
+
+input::placeholder{
+    color: rgb(63 63 70);
+}
+
+input[type="submit"]{
+    flex-grow: 0;
+    color: white;
+    padding: .5em;
+    background-color: rgb(220 38 38);
+    display: block;
+    align-self: flex-start;
+    cursor: pointer;
+}
