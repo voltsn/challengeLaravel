@@ -3,8 +3,8 @@
 @section('title', 'Gestionnaire clients - factures | Creer nouveau client')
 
 @section('content')
-    <h2>Ajouter un client</h2>
-    <div>
+    <div class="flex flex-col justify-center m-auto my-8 w-5/6 max-w-3xl">
+        <h2 class="text-3xl bg-slate-200 p-3 mb-8">Ajouter un client</h2>
         <form action="/clients/create" method="POST">
             @csrf
             <div>
