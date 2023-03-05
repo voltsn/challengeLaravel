@@ -24,7 +24,7 @@ class ClientPostRequest extends FormRequest
         return [
            'name' => 'required|max:255',
            'address' => 'required|regex:/(?:\s*[a-zA-Z0-9]{2,}\s*)*/',
-           'phoneNumber' => 'required|regex:/^\\+?[1-9][0-9]{7,14}$/',
+           'phoneNumber' => 'required|regex:/^\+?[0-9][0-9]{9,14}$/',
            'email' => 'required|email',
            'tva' => 'required',
         ];
