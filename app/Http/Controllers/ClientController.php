@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Http\Requests\ClientPostRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -32,6 +33,14 @@ class ClientController extends Controller
     public function store(ClientPostRequest $request): RedirectResponse
     {
         $request->validated();
+
+        Client::create([
+            'name' => $request['name'],
+            'phoneNumber' => $request['phoneNumber'],
+            'email' => $request['email'],
+            'address' => $request['address'],
+            'tva' => $request['tva']
+        ]);
 
         return redirect('/clients/create')->with('status', 'Client créer avec succès');
     }
