@@ -28,3 +28,12 @@ input[type="submit"]{
     align-self: flex-start;
     cursor: pointer;
 }
+
+.main-table{
+    text-align: left;
+}
+
+.main-table thead th,
+.main-table tbody td{
+    padding-right: 1.5em;
+}
