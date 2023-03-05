@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('ref');
             $table->string('title');
+            $table->float('tva');
             $table->decimal('price', 10, 2);
             $table->foreignId('client_id')->references('id')->on('clients');
             $table->timestamps();
